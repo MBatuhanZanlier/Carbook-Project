@@ -9,6 +9,7 @@ using CarBook.Application.Interfaces.CarInterfaces;
 using CarBook.Persistence.Context;
 using CarBook.Persistence.Repositories;
 using CarBook.Persistence.Repositories.CarRepositories;
+using CarBook.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,7 +55,7 @@ builder.Services.AddScoped<GetContactByIdQueryHandler>();
 builder.Services.AddScoped<UpdateContactCommandHandler>();
 builder.Services.AddScoped<CreateContactCommandHandler>();
 builder.Services.AddScoped<RemoveContactCommandHandler>();
-
+builder.Services.AddApplicationService(builder.Configuration);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
