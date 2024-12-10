@@ -1,10 +1,5 @@
 ﻿using CarBook.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarBook.Persistence.Context
 {
@@ -34,5 +29,9 @@ namespace CarBook.Persistence.Context
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<TagCloud> TagClouds { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<RentaCar> RentaCars { get; set; }
+        public DbSet<RentACarProcess> RentACarProcesses { get; set; }
+        public DbSet<Customer> Customers{ get; set; }
     }
 }

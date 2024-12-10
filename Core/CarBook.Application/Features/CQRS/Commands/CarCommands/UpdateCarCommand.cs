@@ -13,7 +13,8 @@ namespace CarBook.Application.Features.CQRS.Commands.CarCommands
         public string Model { get; set; }
         public string CoverImage { get; set; }
         public int Km { get; set; }
-        public int Transmission { get; set; }
+        public string Transmission { get; set; }
+
         public byte Seat { get; set; }
         public byte Luggage { get; set; }
         public string Fuel { get; set; }
