@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CarBook.Application.Features.Mediator.Results.CarPricingResults
+﻿namespace CarBook.Application.Features.Mediator.Results.CarPricingResults
 {
     public class GetCarPricingWithCarQueryResult
-    { 
+    {  
+        public int CartId { get; set; } 
         public int CarPricingId { get; set; }   
         public string Brand { get; set; }   
         public string Model { get; set; }   

@@ -5,8 +5,8 @@ using NuGet.Protocol;
 
 namespace Carbook.WebUI.ViewComponents._Blog._BlogDetail
 {
-    public class _BlogDetailMainComponentPartial:ViewComponent
-    {  
+    public class _BlogDetailMainComponentPartial : ViewComponent
+    {
         private readonly IHttpClientFactory _httpClientFactory;
 
         public _BlogDetailMainComponentPartial(IHttpClientFactory httpClientFactory)
@@ -15,16 +15,22 @@ namespace Carbook.WebUI.ViewComponents._Blog._BlogDetail
         }
 
         public async Task<IViewComponentResult> InvokeAsync(int id)
-        { 
-            var client=_httpClientFactory.CreateClient();
-            var responsemessage = await client.GetAsync($"https://localhost:7189/api/Blogs/{id}"); 
-            if(responsemessage.IsSuccessStatusCode)  
-            {  
-               var jsondata=await responsemessage.Content.ReadAsStringAsync(); 
-                var values=JsonConvert.DeserializeObject<GetBlogById>(jsondata);
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responsemessage = await client.GetAsync($"https://localhost:7189/api/Blogs/{id}");
+            if (responsemessage.IsSuccessStatusCode)
+            {
+                var jsondata = await responsemessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<GetBlogById>(jsondata);
+
+                var commentcountresponse = await client.GetAsync($"https://localhost:7189/api/Comments/BlogForComentCount?{id}");
+                var jsondata2 = await commentcountresponse.Content.ReadAsStringAsync();
+                ViewBag.commentcount = jsondata2;
+                
                 return View(values);
-            
+
             }
+
             return View();
         }
     }
