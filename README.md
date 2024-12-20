@@ -78,10 +78,13 @@ Havaalanı kontrol alanına yaklaşan veya oradan ayrılan uçakların pilotlar�
 Kulenin tüm uçuşu kontrol etmesi gerekmez. Sadece terminal alanındaki kısıtlamaları uygulamak için vardır çünkü orada bulunan aktörlerin sayısı bir pilot için bunaltıcı olabilir.        
 
 ## Özetle (Mimari ve Tasarım kalıplarının önemini açıklamak istedim)
-Elimden geldiğince sizlere Mimariyi ve tasarım kalıpların ne olduğunu anlatmaya çalıştım. Dahada iyi akılda kalması için şu senaryoyu size anlatmak istiyorum. 
-Şimdi sizlere Mimarinin ve tasarım kalıbını önemini anlatacağım. 
-Dünyada genelde bazı meslekler tarafından kullanılan bir alfabe ve ortak bir global bir yapı var. Yurt dışına gidildiğinde veya sizlerin projelerine yabancı bir insan geldiğinde veya  başka bir firmaya geçtiğinizde yada çalışma arkadaşınızla mimari ve desing paternsiz bir yapı kullandığınızı düşünün aşağ yukarı nelerin yanlış gideceğini  tahmin edebiliyorsunuzdur.Herkes kafasına göre bir yapı ve klasörlendirme yapacaktır proje  ve iş katmanları karışacak ve projenin yönetimi zorlaşmaya başlıyacaktır. Diyelim ki Onion Architecture ve Mediatör Desing paterini bilmediğinizi varsayalım  internetdeki kaynaklardan  öğrenme süreniz alışma süreniz çok sürmiyecektir.  
-Mimari ve Tasarım kalıplarının önemini açıklamak istedim.
+Bugün, yazılım geliştirmede karşılaştığımız önemli kavramlardan biri olan mimari ve tasarım kalıplarının (design patterns) ne kadar kritik olduğunu anlamaya çalışacağız. Konuyu daha iyi kavrayabilmeniz adına, küçük bir senaryo üzerinden giderek açıklamak istiyorum.
+
+Düşünün ki bir yazılım projesine dahil oldunuz ve o projeye katkı sağlayacak yeni bir ekip üyesi olarak çalışmaya başladınız. Şimdi, proje için kullanılan mimari yapıyı ve tasarım kalıplarını düşünün. Eğer takım, evrensel bir yapı ve kalıp kullanmıyorsa, ortaya nasıl bir manzara çıkar? Tüm proje, herkesin kafasına göre oluşturduğu dosya yapıları, klasörler, iş katmanlarıyla dolup taşar. Kodu anlamak, yönetmek ve geliştirmek zorlaşır. Proje ilerledikçe, ekip üyeleri projeye adapte olmakta zorlanır. Hatta bir süre sonra, projede büyük hatalar ve karmaşıklıklar birikmeye başlar. Kısacası, sağlıklı bir yazılım geliştirme süreci neredeyse imkansız hale gelir.
+
+Peki, bu durumu önlemek için ne yapmalıyız?
+
+Mimari ve tasarım kalıpları işte tam bu noktada devreye girer. Bu kalıplar, bir yazılımın nasıl tasarlanması gerektiği konusunda bir rehber işlevi görür. Herkesin kafasına göre değil, belirli bir düzene ve kurallara göre yazılım geliştirilmesini sağlar. Bu yapılar, projelerin ölçeklenebilir, sürdürülebilir ve yönetilebilir olmasına yardımcı olur.
 
 ## Projede Kullanılan Teknolojiler 
 1. ASP.NET Core 8.0 🚀
