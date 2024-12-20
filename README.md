@@ -103,3 +103,20 @@ Mimari ve tasarım kalıpları işte tam bu noktada devreye girer. Bu kalıplar,
 - Admin Panel
 - SignalR ile canlı veri takibi
 - Json Web Token ile Identity güvenliği
+
+## Proje Görselleri 
+![Ekran Görüntüsü (283)](https://github.com/user-attachments/assets/623a93d9-a1b0-4bdd-87c0-fd3a637b06a1)
+![Ekran Görüntüsü (284)](https://github.com/user-attachments/assets/54c609f8-eff6-4cb8-9344-63d0b7147d16)
+![Ekran Görüntüsü (285)](https://github.com/user-attachments/assets/269f0bbd-a913-4e18-b25e-5b72b34393cd)
+![Ekran Görüntüsü (286)](https://github.com/user-attachments/assets/2b6dd40b-92c3-4350-a220-c8525c18dc1b)
+![Ekran Görüntüsü (287)](https://github.com/user-attachments/assets/94fd8669-bebd-4c4d-b41f-4d9447fac3e4)
+![Ekran Görüntüsü (288)](https://github.com/user-attachments/assets/71dba5c6-e598-45ee-8c32-2a959192af50)
+![Ekran Görüntüsü (289)](https://github.com/user-attachments/assets/efd49316-7a30-4b0b-8c81-ec4386321d23)
+![Ekran Görüntüsü (290)](https://github.com/user-attachments/assets/988aceaf-3d7f-47d4-add1-5c11ed72b30f)
+![Ekran Görüntüsü (291)](https://github.com/user-attachments/assets/693eecc0-9354-4c01-98b0-c8b69d54bea9)
+![Ekran Görüntüsü (292)](https://github.com/user-attachments/assets/8f40109b-9365-44ee-98b8-cc09a6767092)
+![Ekran Görüntüsü (293)](https://github.com/user-attachments/assets/0030dd30-42a1-4763-8615-9302db370c3e)
+![Ekran Görüntüsü (294)](https://github.com/user-attachments/assets/554ba36d-cf54-479a-bb19-a263edbee2eb)
+![Ekran Görüntüsü (295)](https://github.com/user-attachments/assets/cf66949a-8346-4714-abb6-de6aeec3e509)
+![Ekran Görüntüsü (296)](https://github.com/user-attachments/assets/31fbc7c6-ecdf-4545-b996-0b0f628df453)
+![Ekran Görüntüsü (297)](https://github.com/user-attachments/assets/51d19cd6-64de-4145-baf5-0ae2a79aaebc)
