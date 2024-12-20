@@ -1,3 +1,4 @@
+![netcore](https://github.com/user-attachments/assets/2d49c508-da55-497f-a3d8-bbd075de9474)
 ## Ön Yazı 
 Merhaba,  
 Bu projem bir araç kiralama web projesidir.  
