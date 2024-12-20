@@ -120,5 +120,11 @@ namespace Carbook.WebUI.Controllers
             }
             return View();
         }
+
+        [HttpGet] 
+        public async Task<IActionResult> AdminCarDetail()
+        {
+            return View();
+        }
     }
 }

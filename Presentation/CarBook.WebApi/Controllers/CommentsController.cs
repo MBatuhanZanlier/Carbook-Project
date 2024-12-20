@@ -1,4 +1,5 @@
-﻿using CarBook.Application.Features.RepositoryPattern;
+﻿using CarBook.Application.Features.Mediator.Commands.CommentCommands;
+using CarBook.Application.Features.RepositoryPattern;
 using CarBook.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -62,6 +63,12 @@ namespace CarBook.WebApi.Controllers
         {
             var values=_commentRepository.GetCountCommentByBlog(id);
             return Ok(values);
+        }
+        [HttpPost("AddComment")] 
+        public async Task<IActionResult> AddComment(CreateCommentCommand command)
+        {   
+               await _mediator.Send(command);
+            return Ok("Başarıyla Eklendi");
         }
 
 

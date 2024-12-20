@@ -23,9 +23,49 @@ using CarBook.Persistence.Repositories.StatisticsRepositories;
 using CarBook.Application.Interfaces.RentACarInterfaces;
 using CarBook.Persistence.Repositories.RentACarRepositories;
 using CarBook.Application.Features.RepositoryPattern;
+using CarBook.Application.Interfaces.CarFeatureInterfaces;
+using CarBook.Persistence.Repositories.CarFeatureRepositories;
+using CarBook.Application.Interfaces.CarDescriptionInterfaces;
+using CarBook.Persistence.Repositories.CarDescriptipmRepositories;
+using CarBook.Application.Interfaces.ReviewInterfaces;
+using CarBook.Persistence.Repositories.ReviewRepositories;
+using FluentValidation.AspNetCore;
+using System.Reflection;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using CarBook.Application.Tools;
+using Microsoft.Extensions.Hosting;
+using CarBook.WebApi.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy("CorsPolicy", builder =>
+    {
+        builder.AllowAnyHeader()
+        .AllowAnyMethod()
+        .SetIsOriginAllowed((host) => true)
+        .AllowCredentials();
+    });
+});
+builder.Services.AddSignalR();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+{
+    opt.RequireHttpsMetadata = false;
+    opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+    {
+        ValidAudience = JwtTokenDefaults.ValidAudience,
+        ValidIssuer = JwtTokenDefaults.ValidIssuer,
+        ClockSkew = TimeSpan.Zero,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtTokenDefaults.Key)),
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true
+    };
+});
+#region Mediator Confiug
 // Add services to the container. 
 builder.Services.AddScoped<CarbookContext>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
@@ -36,6 +76,9 @@ builder.Services.AddScoped(typeof(ITagCloudRepository), typeof(TagCloudRepositor
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(CommentRepository<>)); 
 builder.Services.AddScoped(typeof(IStatisticsRepository), typeof(StatisticsRepository)); 
 builder.Services.AddScoped(typeof(IRentACarRepository), typeof(RentACarRepository)); 
+builder.Services.AddScoped(typeof(ICarFeatureRepository), typeof(CarFeatureRepository)); 
+builder.Services.AddScoped(typeof(ICarDescriptionRepository), typeof(CarDescriptionRepository)); 
+builder.Services.AddScoped(typeof(IReviewRepository), typeof(ReviewRepository)); 
 
 builder.Services.AddScoped<GetAboutByIdQueryHandler>();
 builder.Services.AddScoped<GetAboutQueryHandler>();
@@ -78,6 +121,14 @@ builder.Services.AddScoped<UpdateContactCommandHandler>();
 builder.Services.AddScoped<CreateContactCommandHandler>();
 builder.Services.AddScoped<RemoveContactCommandHandler>();
 builder.Services.AddApplicationService(builder.Configuration);
+#endregion 
+
+
+builder.Services.AddControllers().AddFluentValidation(x =>
+{
+    x.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+});
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -92,10 +143,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.MapHub<CarHub>("/carhub");
 app.Run();
