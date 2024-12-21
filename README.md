@@ -88,28 +88,31 @@ Düşünün ki bir yazılım projesine dahil oldunuz ve o projeye katkı sağlay
 Senaryo: Mimari ve Tasarım Desenlerinin Olmadığı Durum
 Bir yazılım geliştirme ekibinin büyük bir e-ticaret uygulaması geliştirdiğini hayal edelim. Projenin başında herkes heyecanlı ama bir sorun var: Mimari ve tasarım desenleri hakkında hiçbir plan yapılmamış. Herkes projeye kendi tarzında başlıyor.
 
-1. İlk Aşama: Kaos Başlıyor
+# 1. İlk Aşama: Kaos Başlıyor
 Ekip, başlangıçta hiçbir plan yapmadan işe koyuluyor. Her geliştirici kendi alanına odaklanıyor. Bir geliştirici ödeme sistemini yazarken, diğer bir geliştirici kullanıcı arayüzünü tasarlıyor. Bir başka geliştirici ise ürün veritabanını oluşturuyor. Herkes kendi bildiğini yapıyor, kimse diğerinin nasıl çalıştığını bilmiyor.
 
 Sonuç:
 Kullanıcı arayüzü ödeme işlemiyle bağlantı kurmaya çalışıyor ama o kadar karmaşık bir hale geliyor ki, kimse neyin ne olduğunu anlayamıyor.
 Ürün verileri, kullanıcı bilgileri ve ödeme bilgileri farklı yerlerde ve farklı biçimlerde saklanıyor. Hangi modül ne iş yapıyor, kimse net bir şekilde bilmiyor.
 Bir geliştirici bir şey değiştirdiğinde, bu değişiklik beklenmedik hatalara yol açabiliyor çünkü sistemin nasıl çalıştığına dair bir yapı yok.
-2. İkinci Aşama: Sorunlar Derinleşiyor
+# 2. İkinci Aşama: Sorunlar Derinleşiyor
+
 Bir gün, ödeme işlemi sırasında bir hata ortaya çıkıyor. Hatalı ödeme yapan bir kullanıcı raporuyla karşılaşıyorlar. Geliştiriciler, bu hatayı çözmeye çalışırken sistemin karmaşık yapısı yüzünden çok zorlanıyor. Herkes bir modüle odaklanmış durumda, ama hangi modülün hataya neden olduğunu anlamak için saatlerce kodu gözden geçirmeleri gerekiyor. Herkes farklı bir kod yazdığı için, birbirleriyle uyumsuz modüller var.
 
 Sonuç:
-Hata çözülene kadar yazılımcılar, kodu adım adım kontrol etmek zorunda kalıyorlar. Bu, oldukça zaman alıyor ve projeyi yavaşlatıyor. Çözüm bulunana kadar ekip ciddi şekilde zaman kaybediyor.
-3. Üçüncü Aşama: Yeni Özellikler Eklemek Zorlaşıyor
+- Hata çözülene kadar yazılımcılar, kodu adım adım kontrol etmek zorunda kalıyorlar. Bu, oldukça zaman alıyor ve projeyi yavaşlatıyor. Çözüm bulunana kadar ekip ciddi şekilde zaman kaybediyor.
+
+# 3. Üçüncü Aşama: Yeni Özellikler Eklemek Zorlaşıyor
 Proje ilerledikçe, yeni özellikler eklemek isteniyor. Örneğin, "favori ürünler" listesi eklenmesi isteniyor. Ama işte problem şu: Yazılımın yapısı öyle karışık ki, yeni bir özellik eklemek için sistemin her yerine müdahale etmek gerekiyor. Bu da yeni özelliklerin eklenmesini yavaşlatıyor.
 
 Sonuç:
-Yeni özellikler, yazılımın mevcut yapısına entegre edilmekte zorluk yaşıyor. Her eklenen yeni özellik, mevcut sistemin içinde başka sorunlara yol açıyor. Geliştiriciler sürekli hata düzeltmekle uğraşıyor, yazılımın gelişimi hızla yavaşlıyor.
-4. Dördüncü Aşama: İletişim ve İşbirliği Sorunları
+- Yeni özellikler, yazılımın mevcut yapısına entegre edilmekte zorluk yaşıyor. Her eklenen yeni özellik, mevcut sistemin içinde başka sorunlara yol açıyor. Geliştiriciler sürekli hata düzeltmekle uğraşıyor, yazılımın gelişimi hızla yavaşlıyor.
+
+# 4. Dördüncü Aşama: İletişim ve İşbirliği Sorunları
 Ekip içindeki iletişim giderek zorlaşıyor. Her geliştirici kendi modülünde çalışıyor ve modüller birbirine tamamen bağımsız. Örneğin, kullanıcı arayüzü geliştiricisi bir gün, ödeme işlemlerinin tasarımını değiştirmeye karar veriyor, ancak bu değişiklik ödeme modülüyle uyumsuz hale geliyor. Geliştiriciler, her seferinde birbirleriyle iletişime geçmek zorunda kalıyor, çünkü kimse sistemin nasıl çalıştığını tam olarak bilmiyor.
 
 Sonuç:
-Herkes farklı bir dilde yazıyor gibi, çok fazla iletişim sorunu çıkıyor. İşbirliği yapmak yerine, her geliştirici kendi modülünü tamamlama derdine düşüyor. Ekip içindeki uyum tamamen kayboluyor. 
+- Herkes farklı bir dilde yazıyor gibi, çok fazla iletişim sorunu çıkıyor. İşbirliği yapmak yerine, her geliştirici kendi modülünü tamamlama derdine düşüyor. Ekip içindeki uyum tamamen kayboluyor. 
 
 Peki, bu durumu önlemek için ne yapmalıyız?
 
