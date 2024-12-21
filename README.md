@@ -83,11 +83,40 @@ Kulenin tüm uçuşu kontrol etmesi gerekmez. Sadece terminal alanındaki kısı
 ## Özetle (Mimari ve Tasarım kalıplarının önemini açıklamak istedim)
 Bugün, yazılım geliştirmede karşılaştığımız önemli kavramlardan biri olan mimari ve tasarım kalıplarının (design patterns) ne kadar kritik olduğunu anlamaya çalışacağız. Konuyu daha iyi kavrayabilmeniz adına, küçük bir senaryo üzerinden giderek açıklamak istiyorum.
 
-Düşünün ki bir yazılım projesine dahil oldunuz ve o projeye katkı sağlayacak yeni bir ekip üyesi olarak çalışmaya başladınız. Şimdi, proje için kullanılan mimari yapıyı ve tasarım kalıplarını düşünün. Eğer takım, evrensel bir yapı ve kalıp kullanmıyorsa, ortaya nasıl bir manzara çıkar? Tüm proje, herkesin kafasına göre oluşturduğu dosya yapıları, klasörler, iş katmanlarıyla dolup taşar. Kodu anlamak, yönetmek ve geliştirmek zorlaşır. Proje ilerledikçe, ekip üyeleri projeye adapte olmakta zorlanır. Hatta bir süre sonra, projede büyük hatalar ve karmaşıklıklar birikmeye başlar. Kısacası, sağlıklı bir yazılım geliştirme süreci neredeyse imkansız hale gelir.
+Düşünün ki bir yazılım projesine dahil oldunuz ve o projeye katkı sağlayacak yeni bir ekip üyesi olarak çalışmaya başladınız. Şimdi, proje için kullanılan mimari yapıyı ve tasarım kalıplarını düşünün. Eğer takım, evrensel bir yapı ve kalıp kullanmıyorsa, ortaya nasıl bir manzara çıkar? Tüm proje, herkesin kafasına göre oluşturduğu dosya yapıları, klasörler, iş katmanlarıyla dolup taşar. Kodu anlamak, yönetmek ve geliştirmek zorlaşır. Proje ilerledikçe, ekip üyeleri projeye adapte olmakta zorlanır. Hatta bir süre sonra, projede büyük hatalar ve karmaşıklıklar birikmeye başlar. Kısacası, sağlıklı bir yazılım geliştirme süreci neredeyse imkansız hale gelir.Gelin bunu bir senaryo üzerinden anlatıyım sizlere. 
+
+Senaryo: Mimari ve Tasarım Desenlerinin Olmadığı Durum
+Bir yazılım geliştirme ekibinin büyük bir e-ticaret uygulaması geliştirdiğini hayal edelim. Projenin başında herkes heyecanlı ama bir sorun var: Mimari ve tasarım desenleri hakkında hiçbir plan yapılmamış. Herkes projeye kendi tarzında başlıyor.
+
+1. İlk Aşama: Kaos Başlıyor
+Ekip, başlangıçta hiçbir plan yapmadan işe koyuluyor. Her geliştirici kendi alanına odaklanıyor. Bir geliştirici ödeme sistemini yazarken, diğer bir geliştirici kullanıcı arayüzünü tasarlıyor. Bir başka geliştirici ise ürün veritabanını oluşturuyor. Herkes kendi bildiğini yapıyor, kimse diğerinin nasıl çalıştığını bilmiyor.
+
+Sonuç:
+Kullanıcı arayüzü ödeme işlemiyle bağlantı kurmaya çalışıyor ama o kadar karmaşık bir hale geliyor ki, kimse neyin ne olduğunu anlayamıyor.
+Ürün verileri, kullanıcı bilgileri ve ödeme bilgileri farklı yerlerde ve farklı biçimlerde saklanıyor. Hangi modül ne iş yapıyor, kimse net bir şekilde bilmiyor.
+Bir geliştirici bir şey değiştirdiğinde, bu değişiklik beklenmedik hatalara yol açabiliyor çünkü sistemin nasıl çalıştığına dair bir yapı yok.
+2. İkinci Aşama: Sorunlar Derinleşiyor
+Bir gün, ödeme işlemi sırasında bir hata ortaya çıkıyor. Hatalı ödeme yapan bir kullanıcı raporuyla karşılaşıyorlar. Geliştiriciler, bu hatayı çözmeye çalışırken sistemin karmaşık yapısı yüzünden çok zorlanıyor. Herkes bir modüle odaklanmış durumda, ama hangi modülün hataya neden olduğunu anlamak için saatlerce kodu gözden geçirmeleri gerekiyor. Herkes farklı bir kod yazdığı için, birbirleriyle uyumsuz modüller var.
+
+Sonuç:
+Hata çözülene kadar yazılımcılar, kodu adım adım kontrol etmek zorunda kalıyorlar. Bu, oldukça zaman alıyor ve projeyi yavaşlatıyor. Çözüm bulunana kadar ekip ciddi şekilde zaman kaybediyor.
+3. Üçüncü Aşama: Yeni Özellikler Eklemek Zorlaşıyor
+Proje ilerledikçe, yeni özellikler eklemek isteniyor. Örneğin, "favori ürünler" listesi eklenmesi isteniyor. Ama işte problem şu: Yazılımın yapısı öyle karışık ki, yeni bir özellik eklemek için sistemin her yerine müdahale etmek gerekiyor. Bu da yeni özelliklerin eklenmesini yavaşlatıyor.
+
+Sonuç:
+Yeni özellikler, yazılımın mevcut yapısına entegre edilmekte zorluk yaşıyor. Her eklenen yeni özellik, mevcut sistemin içinde başka sorunlara yol açıyor. Geliştiriciler sürekli hata düzeltmekle uğraşıyor, yazılımın gelişimi hızla yavaşlıyor.
+4. Dördüncü Aşama: İletişim ve İşbirliği Sorunları
+Ekip içindeki iletişim giderek zorlaşıyor. Her geliştirici kendi modülünde çalışıyor ve modüller birbirine tamamen bağımsız. Örneğin, kullanıcı arayüzü geliştiricisi bir gün, ödeme işlemlerinin tasarımını değiştirmeye karar veriyor, ancak bu değişiklik ödeme modülüyle uyumsuz hale geliyor. Geliştiriciler, her seferinde birbirleriyle iletişime geçmek zorunda kalıyor, çünkü kimse sistemin nasıl çalıştığını tam olarak bilmiyor.
+
+Sonuç:
+Herkes farklı bir dilde yazıyor gibi, çok fazla iletişim sorunu çıkıyor. İşbirliği yapmak yerine, her geliştirici kendi modülünü tamamlama derdine düşüyor. Ekip içindeki uyum tamamen kayboluyor. 
 
 Peki, bu durumu önlemek için ne yapmalıyız?
 
-Mimari ve tasarım kalıpları işte tam bu noktada devreye girer. Bu kalıplar, bir yazılımın nasıl tasarlanması gerektiği konusunda bir rehber işlevi görür. Herkesin kafasına göre değil, belirli bir düzene ve kurallara göre yazılım geliştirilmesini sağlar. Bu yapılar, projelerin ölçeklenebilir, sürdürülebilir ve yönetilebilir olmasına yardımcı olur.
+- Mimari ve tasarım kalıpları işte tam bu noktada devreye girer. Bu kalıplar, bir yazılımın nasıl tasarlanması gerektiği konusunda bir rehber işlevi görür. Herkesin kafasına göre değil, belirli bir düzene ve kurallara göre yazılım geliştirilmesini sağlar. Bu yapılar, projelerin ölçeklenebilir, sürdürülebilir ve yönetilebilir olmasına yardımcı olur. 
+
+- İyi bir yazılım mimarisi ve tasarım deseni, tüm bu sorunları önleyebilir ve yazılımın daha sürdürülebilir, güvenli ve verimli olmasını sağlar. Bu nedenle, baştan iyi bir yapı kurmak, ileride karşılaşabileceğimiz tüm zorlukları minimize etmek için çok önemlidir.
+
 
 ## Projede Kullanılan Teknolojiler 
 1. ASP.NET Core 8.0 🚀
