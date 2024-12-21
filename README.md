@@ -28,7 +28,9 @@ Desenler sıklıkla algoritmalarla karıştırılır, çünkü her iki kavram da
 Bir algoritmanın benzetmesi bir yemek tarifidir: her ikisinin de bir hedefe ulaşmak için net adımları vardır. Öte yandan, bir desen daha çok bir taslak gibidir: sonucun ve özelliklerinin ne olduğunu görebilirsiniz, ancak uygulamanın tam sırası size kalmıştır. 
 
 ## Tasarım Deseni ile Mimari arasında fark nelerdir? 
-Aklınızı çok da karıştırmak istemiyorum, aslında konuyu şöyle özetleyecek olursam: Mimari, yapacağınız bir projenin iskeletini oluşturur. Tasarım deseni ise bu iskeletin üzerine, belirli bir sorunu çözmek için uygulayacağınız yapı taşlarını yerleştirir. Yani, mimari genel yapıyı ve temel yönelimleri belirlerken, tasarım desenleri bu yapıyı nasıl daha verimli, sürdürülebilir ve esnek hale getirebileceğinizi gösteren pratik çözümler sunar. Bir nevi mimari, büyük resmi çizerken, tasarım desenleri bu resmin içindeki detayları doğru şekilde yerleştirmenize yardımcı olur. 
+Aklınızı çok da karıştırmak istemiyorum, aslında konuyu şöyle özetleyecek olursam: Mimari, yapacağınız bir projenin iskeletini oluşturur. Tasarım deseni ise bu iskeletin üzerine, belirli bir sorunu çözmek için uygulayacağınız yapı taşlarını yerleştirir. Yani, mimari genel yapıyı ve temel yönelimleri belirlerken, tasarım desenleri bu yapıyı nasıl daha verimli, sürdürülebilir ve esnek hale getirebileceğinizi gösteren pratik çözümler sunar. Bir nevi mimari, büyük resmi çizerken, tasarım desenleri bu resmin içindeki detayları doğru şekilde yerleştirmenize yardımcı olur.  
+
+Tasarım deseni ile mimari, her ne kadar birbirleriyle ilişkili olsa da farklı amaçlara hizmet eden alanlardır. Bu nedenle, karışıklığı önlemek amacıyla aşağıdaki tabloyu hazırladım.
 
 | **Özellik**             | **Mimari**                                              | **Tasarım Deseni**                                  |
 |-------------------------|---------------------------------------------------------|-----------------------------------------------------|
@@ -67,7 +69,7 @@ CQRS, temel olarak komut (command) ve sorgu (query) işlemlerini birbirinden ay�
 Command (Komut): Veritabanı üzerinde değişiklik yapmak, veriyi eklemek, güncellemek veya silmek için kullanılan işlemleri temsil eder. 
 - Yeni bir veri eklemek ya da var olan veri üzerinde güncelleme yapmak için kullanılır. Örnek vermek gerekirse; Insert, Update, Delete. Geriye veri döndürmez.
 
-Query (Sorgu): Veritabanından veri okumak, sorgulamak ve görüntülemek için kullanılan işlemleri temsil eder.
+- Query (Sorgu): Veritabanından veri okumak, sorgulamak ve görüntülemek için kullanılan işlemleri temsil eder.
 Veritabanından veri almak için kullanılır. Geriye sadece belirtilen modeli döner ve veri üzerinde herhangi bir değişiklik yapmaz. Oluşturacağımız Query’lerimiz genellikle ‘Get’ ön eki ile isimlendirilir.
 
 ## Mediator Desing Patern
