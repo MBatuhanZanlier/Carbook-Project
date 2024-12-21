@@ -142,9 +142,9 @@ Sonuç:
 ## Proje Görselleri 
 ![Ekran Görüntüsü (283)](https://github.com/user-attachments/assets/623a93d9-a1b0-4bdd-87c0-fd3a637b06a1)
 ![Ekran Görüntüsü (284)](https://github.com/user-attachments/assets/54c609f8-eff6-4cb8-9344-63d0b7147d16)
-![Ekran Görüntüsü (285)](https://github.com/user-attachments/assets/269f0bbd-a913-4e18-b25e-5b72b34393cd)
-![Ekran Görüntüsü (298)](https://github.com/user-attachments/assets/77928620-bf47-4a1e-8543-97e3921ed1e2)
-![Ekran Görüntüsü (287)](https://github.com/user-attachments/assets/94fd8669-bebd-4c4d-b41f-4d9447fac3e4)
+![Ekran Görüntüsü (285)](https://github.com/user-attachments/assets/269f0bbd-a913-4e18-b25e-5b72b34393cd) 
+![Ekran Görüntüsü (286)](https://github.com/user-attachments/assets/0e4ca919-3cdb-434f-bdc9-22384f6c1296)
+![Ekran Görüntüsü (298)](https://github.com/user-attachments/assets/77928620-bf47-4a1e-8543-97e3921ed1e2) 
 ![Ekran Görüntüsü (288)](https://github.com/user-attachments/assets/71dba5c6-e598-45ee-8c32-2a959192af50)
 ![Ekran Görüntüsü (289)](https://github.com/user-attachments/assets/efd49316-7a30-4b0b-8c81-ec4386321d23)
 ![Ekran Görüntüsü (290)](https://github.com/user-attachments/assets/988aceaf-3d7f-47d4-add1-5c11ed72b30f)
