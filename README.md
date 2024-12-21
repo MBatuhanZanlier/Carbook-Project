@@ -92,9 +92,9 @@ Bir yazılım geliştirme ekibinin büyük bir e-ticaret uygulaması geliştirdi
 Ekip, başlangıçta hiçbir plan yapmadan işe koyuluyor. Her geliştirici kendi alanına odaklanıyor. Bir geliştirici ödeme sistemini yazarken, diğer bir geliştirici kullanıcı arayüzünü tasarlıyor. Bir başka geliştirici ise ürün veritabanını oluşturuyor. Herkes kendi bildiğini yapıyor, kimse diğerinin nasıl çalıştığını bilmiyor.
 
 Sonuç:
-Kullanıcı arayüzü ödeme işlemiyle bağlantı kurmaya çalışıyor ama o kadar karmaşık bir hale geliyor ki, kimse neyin ne olduğunu anlayamıyor.
-Ürün verileri, kullanıcı bilgileri ve ödeme bilgileri farklı yerlerde ve farklı biçimlerde saklanıyor. Hangi modül ne iş yapıyor, kimse net bir şekilde bilmiyor.
-Bir geliştirici bir şey değiştirdiğinde, bu değişiklik beklenmedik hatalara yol açabiliyor çünkü sistemin nasıl çalıştığına dair bir yapı yok.
+- Kullanıcı arayüzü ödeme işlemiyle bağlantı kurmaya çalışıyor ama o kadar karmaşık bir hale geliyor ki, kimse neyin ne olduğunu anlayamıyor.
+- Ürün verileri, kullanıcı bilgileri ve ödeme bilgileri farklı yerlerde ve farklı biçimlerde saklanıyor. Hangi modül ne iş yapıyor, kimse net bir şekilde bilmiyor.
+- Bir geliştirici bir şey değiştirdiğinde, bu değişiklik beklenmedik hatalara yol açabiliyor çünkü sistemin nasıl çalıştığına dair bir yapı yok.
 # 2. İkinci Aşama: Sorunlar Derinleşiyor
 
 Bir gün, ödeme işlemi sırasında bir hata ortaya çıkıyor. Hatalı ödeme yapan bir kullanıcı raporuyla karşılaşıyorlar. Geliştiriciler, bu hatayı çözmeye çalışırken sistemin karmaşık yapısı yüzünden çok zorlanıyor. Herkes bir modüle odaklanmış durumda, ama hangi modülün hataya neden olduğunu anlamak için saatlerce kodu gözden geçirmeleri gerekiyor. Herkes farklı bir kod yazdığı için, birbirleriyle uyumsuz modüller var.
