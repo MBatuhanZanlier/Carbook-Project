@@ -114,7 +114,7 @@ Ekip içindeki iletişim giderek zorlaşıyor. Her geliştirici kendi modülünd
 Sonuç:
 - Herkes farklı bir dilde yazıyor gibi, çok fazla iletişim sorunu çıkıyor. İşbirliği yapmak yerine, her geliştirici kendi modülünü tamamlama derdine düşüyor. Ekip içindeki uyum tamamen kayboluyor. 
 
-Peki, bu durumu önlemek için ne yapmalıyız?
+# Peki, bu durumu önlemek için ne yapmalıyız?
 
 - Mimari ve tasarım kalıpları işte tam bu noktada devreye girer. Bu kalıplar, bir yazılımın nasıl tasarlanması gerektiği konusunda bir rehber işlevi görür. Herkesin kafasına göre değil, belirli bir düzene ve kurallara göre yazılım geliştirilmesini sağlar. Bu yapılar, projelerin ölçeklenebilir, sürdürülebilir ve yönetilebilir olmasına yardımcı olur. 
 
